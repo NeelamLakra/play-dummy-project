@@ -1,0 +1,12 @@
+@(user:Form[users.userInformation])(implicit request: RequestHeader)
+@import helper._
+
+@main("Welcome to play") {
+<form action="@routes.Day2Controller.storeData()" method="POST">
+    @CSRF.formField
+    <input name="fname" type="text"/><br>
+    <input name="lname" type="text"/><br>
+    <input name="email" type="text"/><br>
+    <input value="submit" type="submit"/><br>
+</form>
+}

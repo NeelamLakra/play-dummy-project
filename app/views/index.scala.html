@@ -1,0 +1,11 @@
+@(recordForm : Form[user])(implicit messages :MessagesProvider,request: RequestHeader)
+@import helper._
+
+@helper.form(action=routes.HomeController.validate()){
+@CSRF.formField
+@helper.inputText(recordForm("name"))
+@helper.inputText(recordForm("email"))
+<button type="submit" value="submit"> </button>
+}
+
+

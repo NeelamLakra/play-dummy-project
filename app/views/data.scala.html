@@ -1,0 +1,5 @@
+@(record:user)(implicit request: RequestHeader, flash: Flash)
+@flash.get("success").getOrElse("Welcome")
+@main("user") {
+<h1>@record.name @record.email</h1>
+}
